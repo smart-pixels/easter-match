@@ -507,6 +507,9 @@ function App() {
           <div style={{width:`${prog*100}%`,height:"100%",background:"linear-gradient(90deg,#f06292,#ba68c8,#7986cb)",borderRadius:10,transition:"width 0.4s ease"}}/>
         </div>
         <div style={{color:"rgba(100,40,120,0.5)",fontSize:10,textAlign:"right",marginTop:2}}>{score.toLocaleString()} / {target.toLocaleString()}</div>
+        <div style={{display:"flex",justifyContent:"center",marginTop:8}}>
+          <button onClick={restart} style={{background:"linear-gradient(135deg,#f06292,#ba68c8)",color:"#fff",border:"none",borderRadius:14,padding:"11px 22px",fontSize:15,fontWeight:900,cursor:"pointer",boxShadow:"0 3px 12px rgba(186,104,200,0.35)",touchAction:"manipulation",WebkitTapHighlightColor:"transparent"}}>🐣 New Game</button>
+        </div>
       </div>
 
       {toast&&<div style={{position:"fixed",top:"12%",left:"50%",transform:"translateX(-50%)",background:"linear-gradient(135deg,#f48fb1,#ce93d8)",color:"#fff",fontWeight:900,fontSize:16,padding:"10px 24px",borderRadius:28,zIndex:100,boxShadow:"0 6px 20px rgba(200,100,200,0.4)",whiteSpace:"nowrap",pointerEvents:"none"}}>{toast}</div>}
@@ -566,7 +569,6 @@ function App() {
       </div>
 
       <div style={{display:"flex",gap:8,marginTop:10}}>
-        <button onClick={restart} style={{background:"linear-gradient(135deg,#f06292,#ba68c8)",color:"#fff",border:"none",borderRadius:14,padding:"11px 22px",fontSize:15,fontWeight:900,cursor:"pointer",boxShadow:"0 3px 12px rgba(186,104,200,0.35)",touchAction:"manipulation",WebkitTapHighlightColor:"transparent"}}>🐣 New Game</button>
         <button onClick={()=>setCbMode(v=>!v)} style={{background:"rgba(255,255,255,0.6)",border:"none",borderRadius:14,padding:"11px 14px",fontSize:13,color:"rgba(100,40,120,0.8)",cursor:"pointer",touchAction:"manipulation",WebkitTapHighlightColor:"transparent"}}>👁 {cbMode?"CB ON":"OFF"}</button>
       </div>
 
